@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0000;
+  --secondary: #999;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+div.card {
+  color: #525252;
+}
+
+a.active {
+  font-weight: 500;
+  background-color: rgba(253, 70, 73, 80) !important;
+  color: #f8fdef !important;
+}
+
+td {
+  white-space: nowrap;
+}
+
+input.no-focus:focus,
+select.no-focus:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border: 1px solid transparent !important;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.table :where(thead, tbody) :where(tr:first-child:last-child) {
+  border-bottom-width: 0px !important;
+}
+
+.menu button:disabled,
+.menu button[disabled] {
+  color: oklch(var(--b1)) !important;
+  background-color: oklch(var(--p)) !important;
+}
+
+details[open] summary::before {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: auto;
+}

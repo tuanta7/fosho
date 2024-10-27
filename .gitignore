@@ -1,0 +1,6 @@
+fosho/src/.env
+*.env
+data/
+imgs/
+
+debezium/
